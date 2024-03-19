@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <nav>
+            <select>
+                <option value="">Dark</option>
+                <option>Light</option>
+            </select>
+        </nav>
+    </div>
+
+    <script>
+        const select = document.querySelector('select');
+        const html = document.querySelector('html');
+
+        select.addEventListener('change', ()=>{
+            select.value === 'Light'? modeSwitch('white', 'black') : modeSwitch('black', white)
+        })
+
+        function modeSwitch(bgColor, textColor) {
+
+            html.style.backgroundColor = bgColor;
+            html.style.color = textColor;
+
+        }
+        
+    </script>
+</body>
+</html>
