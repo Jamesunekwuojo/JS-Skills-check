@@ -13,14 +13,46 @@
                 <option>Light</option>
             </select>
         </nav>
+
+        <p>Just playing with colors </p>
     </div>
 
     <script>
         const select = document.querySelector('select');
         const html = document.querySelector('html');
 
+
+// Function to keep the mode in the rigth color even if the browser is being refreshed.
+        function setInitialMode(){
+
+            const mode = localStorage.getItem('mode');
+
+            switch(mode){
+                case "Dark":
+                    html.style.backgroundColor = 'black';
+                    html.style.color = 'white';
+                    select.value = 'Dark';
+                    break
+
+                default:
+                    html.style.backgroundColor = 'white';
+                    html.style.color = 'black';
+                    select.value = 'Light';
+
+
+            }
+
+
+        }
+
+        setInitialMode();
+
+
+        
         select.addEventListener('change', ()=>{
-            select.value === 'Light'? modeSwitch('white', 'black') : modeSwitch('black', white)
+            const mode = select.value;
+            localStorage.setItem('mode', mode);
+            mode === 'Light'? modeSwitch('white', 'black') : modeSwitch('black', 'white');
         })
 
         function modeSwitch(bgColor, textColor) {
