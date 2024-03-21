@@ -3,6 +3,7 @@ const h1 = document.querySelector('h1');
 const list = document. querySelector('ul');
 
 
+
 selectMonth.addEventListener('change', () =>{
     const choice = selectMonth.value;
     let days = 31;
@@ -36,7 +37,7 @@ function createCalendar(days, choice){
     for(let i =1; i<=days; i++){
         const listItem = document.createElement('li');
         listItem.textContent =i;
-        list.appendChild('listItem');
+        list.appendChild(listItem);
     }
 
 }

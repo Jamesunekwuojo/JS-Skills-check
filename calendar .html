@@ -6,9 +6,17 @@
     <title>Document</title>
 
     <style>
-        li{
-            width: 20px;
+        ul{
+            width: fit-content;
             background-color: purple;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            padding: 5px;
+            align-content: space-between;
+        }
+        li{
+            margin: 10px;
         }
             
         
@@ -18,18 +26,18 @@
     <div>
         <label for="">Select Month</label>
         <select name="" id="">
-            <option value="">January</option>
-            <option value="">February</option>
-            <option value="">Match</option>
-            <option value="">April</option>//
-            <option value="">May</option>
-            <option value="">June</option>//
-            <option value="">July</option>
-            <option value="">August</option>
-            <option value="">September</option>//
-            <option value="">October</option>
-            <option value="">November</option>//
-            <option value="">December</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
         </select>
 
 
